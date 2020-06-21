@@ -1,0 +1,6 @@
+<form class="example-form" novalidate>
+  <mat-form-field class="example-full-width">
+    <input color="secondary" type="tel" value="{{message}}" matInput placeholder="Name">
+      <mat-icon [ngClass]="{'listen-voice':listen=='warn'}" [color]="listen" style="cursor: pointer;" (click)="commandVoice()" matSuffix>keyboard_voice</mat-icon>
+  </mat-form-field>
+</form>

@@ -1,0 +1,13 @@
+.listen-voice{
+    animation-duration: 1s;
+    animation-name: listen;
+    animation-iteration-count: infinite;
+}
+@keyframes listen{
+    from{
+        font-size: 35px
+    }
+    to{
+
+    }
+}

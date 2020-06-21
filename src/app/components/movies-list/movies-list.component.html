@@ -1,0 +1,25 @@
+<div style="max-width: 90%;margin: 0 auto">
+  <mat-grid-list [cols]="col" gutterSize="4" rowHeight="600px">
+    <mat-grid-tile *ngFor="let movie of movies">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar [ngStyle]="{'backgroundImage':'url('+movie.getImage()+')'}" class="example-header-image"></div>
+          <mat-card-title>{{(movie.title|slice:0:15)+'....'}}</mat-card-title>
+          <mat-card-subtitle>{{(movie.originalTitle|slice:0:15)+'....'}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="movie.getImage()" style="max-height: 300px" [alt]="movie.title">
+        <mat-card-content>
+          <p>
+            {{(movie.overview| slice:0:70)+'....'}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>
